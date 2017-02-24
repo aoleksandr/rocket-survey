@@ -1,0 +1,10 @@
+{
+    "verbose": true,
+    "execMap": {
+        "js": "node src/server/server.js"
+    },
+    "watch": [
+        "src/server"
+    ],
+    "ext": "js json"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "rocket-survey",
+  "version": "1.0.0",
+  "description": "test assignment app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "aoleksandr",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "css-loader": "^0.26.2",
+    "file-loader": "^0.10.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-plugin-import": "^2.2.0",
+    "express": "^4.14.1",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.2",
+    "webpack-dev-middleware": "^1.10.1"
+  }
+}
