@@ -1,4 +1,4 @@
-import template from './question.html';
+import angular from 'angular';
 
 export default function($compile) {
   let directive = {
@@ -7,15 +7,15 @@ export default function($compile) {
       data: '='
     },
     controller($scope, $element) {
-      let generatedTpl = $compile(generateTemplate($scope.data))($scope);
-      $element.prepend(generatedTpl);
-    },
-    template
+      let generatedElement = angular.element(generateTemplate($scope.data));
+      $element.replaceWith(generatedElement);
+      $compile(generatedElement)($scope);
+    }
   };
 
   function generateTemplate(question) {
-    let directiveName = `${question.type}-input`;
-    return `<p>${question.body.replace('___', `<${directiveName} />`)}</p>`;
+    let directiveName = `<${question.type}-input />`;
+    return `<p>${question.body.replace('___', directiveName)}</p>`;
   }
 
   return directive;

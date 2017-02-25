@@ -1,6 +1,6 @@
-<form name="questionsForm">
+<form name="$ctrl.questionsForm" novalidate>
   <div>
     <question ng-repeat="question in $ctrl.questions" data="question" />
   </div>
-  <button ng-click="$ctrl.onNextClick()">Next</button>
+  <button ng-disabled="$ctrl.questionsForm.$invalid" ng-click="$ctrl.onNextClick()">Next</button>
 </form>

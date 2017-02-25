@@ -1,3 +1,7 @@
+import template from './email-input.html';
+
 export default {
-  template: '<input type="text" placeholder="email" />'
+  template: template,
+  controller() {
+  }
 };

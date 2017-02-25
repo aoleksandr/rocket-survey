@@ -1,6 +1,7 @@
 'use strict';
 
 import angular from 'angular';
+import ngMessages from 'angular-messages';
 import AppComponent from './components/app.component';
 import StageComponent from './components/stage.component';
 import QuestionDirective from './components/questions/question.directive';
@@ -11,7 +12,7 @@ import PhoneInputComponent from './components/inputs/phone-input.component';
 import ApiService from './api.service';
 import './index.scss';
 
-angular.module('rocketSurvey', [])
+angular.module('rocketSurvey', [ngMessages])
   .component('app', AppComponent)
   .component('stage', StageComponent)
   .directive('question', QuestionDirective)
