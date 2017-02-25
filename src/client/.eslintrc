@@ -24,7 +24,7 @@
     "no-unused-vars": "warn",
     "no-underscore-dangle": 0,
     "no-alert": 0,
-    "import/extensions": 1,
+    "import/extensions": 0,
     "no-lone-blocks": 0
   }
 }

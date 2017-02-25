@@ -1,0 +1,6 @@
+<form name="questionsForm">
+  <div>
+    <question ng-repeat="question in $ctrl.questions" data="question" />
+  </div>
+  <button ng-click="$ctrl.onNextClick()">Next</button>
+</form>
