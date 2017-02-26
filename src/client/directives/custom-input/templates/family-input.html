@@ -1,0 +1,8 @@
+<ng-form name="$ctrl.customInputForm" class="input-field">
+  <select name="country" ng-model="$ctrl.value" placeholder="country" ng-options="n for n in [] | range:1:11" required>
+    <option value="">- Select -</option>
+  </select>
+  <div ng-show="$ctrl.customInputForm.country.$touched" class="error" ng-messages="$ctrl.customInputForm.country.$error">
+    <span ng-message="required">Please select</span>
+  </div>
+</ng-form>
