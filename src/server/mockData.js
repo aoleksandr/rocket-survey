@@ -1,4 +1,4 @@
-module.exports = [{
+let stages = [{
   text: 'RocketRoute would like to give you the best product. This survey will take few seconds.',
   questions: [{
     type: 'name',
@@ -36,3 +36,12 @@ module.exports = [{
     body: 'There is ___ person in my tax household'
   }]
 }];
+
+let countries = [
+    'Canada', 'Germany', 'Ukraine', 'Italy', 'China'
+];
+
+module.exports = {
+    countries,
+    stages
+};

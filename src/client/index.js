@@ -9,9 +9,12 @@ import QuestionsListComponent from './components/questions/questions-list.compon
 import NameInputComponent from './components/inputs/name-input.component';
 import EmailInputComponent from './components/inputs/email-input.component';
 import PhoneInputComponent from './components/inputs/phone-input.component';
+import CountryInputComponent from './components/inputs/country-input.component';
+import ZipInputComponent from './components/inputs/zip-input.component';
 import ApiService from './services/api.service';
 import StateService from './services/state.service';
 import PhoneDirective from './directives/validators/phone.directive';
+import ZipDirective from './directives/validators/zip.directive';
 import './index.scss';
 
 angular.module('rocketSurvey', [ngMessages])
@@ -22,6 +25,9 @@ angular.module('rocketSurvey', [ngMessages])
   .component('nameInput', NameInputComponent)
   .component('emailInput', EmailInputComponent)
   .component('phoneInput', PhoneInputComponent)
+  .component('countryInput', CountryInputComponent)
+  .component('zipInput', ZipInputComponent)
   .factory('ApiService', ApiService)
   .factory('StateService', StateService)
-  .directive('phone', PhoneDirective);
+  .directive('phone', PhoneDirective)
+  .directive('zip', ZipDirective);
