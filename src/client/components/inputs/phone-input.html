@@ -1,0 +1,7 @@
+<ng-form name="$ctrl.customInputForm" class="input-field">
+    <input phone type="text" name="phone" ng-model="$ctrl.value" required />
+    <div ng-show="$ctrl.customInputForm.phone.$touched" class="error" ng-messages="$ctrl.customInputForm.phone.$error">
+        <span ng-message="required">This field is required</span>
+        <span ng-message="phone">Phone is invalid</span>
+    </div>
+</ng-form>

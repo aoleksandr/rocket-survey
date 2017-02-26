@@ -1,3 +1,8 @@
+import template from './phone-input.html';
+
 export default {
-  template: '<input type="text" placeholder="phone" />'
+  bindings: {
+    value: '='
+  },
+  template
 };

@@ -1,3 +1,8 @@
+import template from './name-input.html';
+
 export default {
-  template: '<input type="text" placeholder="name" />'
+  bindings: {
+    value: '='
+  },
+  template: template
 };
