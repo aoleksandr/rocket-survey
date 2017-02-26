@@ -4,8 +4,11 @@
   <stage ng-repeat="(index, stage) in $ctrl.stages" 
     active="$ctrl.state.stage === index" index="index" />
 </section>
-<section id="questions" ng-if="$ctrl.activeStage">
+<section id="questions" ng-if="!$ctrl.loading && !$ctrl.done">
   <div id="description">{{$ctrl.activeStage.text}}</div>
-  <questions-list questions="$ctrl.activeStage.questions" on-next-click="$ctrl.onNextClick()" />
+  <questions-list questions="$ctrl.activeStage.questions" on-next="$ctrl.onNext()" />
 </section>
+<div id="success" ng-if="$ctrl.done">
+
+</div>
 
