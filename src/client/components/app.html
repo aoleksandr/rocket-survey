@@ -3,14 +3,14 @@
 </section>
 <h2 ng-if="$ctrl.loading">Loading</h2>
 <div id="app-container">
-  <section id="stages" ng-if="!$ctrl.loading">
+  <section id="stages" ng-if="!$ctrl.loading && !$ctrl.done">
     <stage ng-repeat="(index, stage) in $ctrl.stages" active="$ctrl.state.stage === index" index="index" />
   </section>
   <section id="questions" ng-if="!$ctrl.loading && !$ctrl.done">
     <p class="stage-description">{{$ctrl.activeStage.text}}</p>
     <questions-list questions="$ctrl.activeStage.questions" on-next="$ctrl.onNext()" />
   </section>
-  <section id="success">
+  <section id="success" ng-if="$ctrl.done">
     Thanks for your answers. We will get back to you within 24 hours with our amazing product
   </section>
 </div>
