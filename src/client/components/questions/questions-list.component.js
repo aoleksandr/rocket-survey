@@ -15,8 +15,10 @@ export default {
     };
 
     this.state = StateService.getState();
+    this.showNext = false;
 
     $scope.$watch('$ctrl.questionsForm.$valid', (newVal) => {
+      this.showNext = (this.state.question >= this.questions.length - 1);
       if(this.questionsForm.$dirty && newVal) {
         StateService.nextQuestion();
       }

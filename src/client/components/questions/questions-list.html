@@ -1,7 +1,7 @@
 <form name="$ctrl.questionsForm" novalidate>
-  <div>
+  <div class="questions-list">
     <question ng-repeat="(index, question) in $ctrl.questions" 
       data="question" ng-if="index <= $ctrl.state.question" value="$ctrl.payload[question.field]" />
   </div>
-  <button ng-disabled="$ctrl.questionsForm.$invalid" ng-click="$ctrl.onNextClick()">Next</button>
+  <button ng-disabled="$ctrl.questionsForm.$invalid" ng-show="$ctrl.showNext" ng-click="$ctrl.onNextClick()">Next</button>
 </form>

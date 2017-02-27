@@ -15,6 +15,7 @@
     "babel-loader": "^6.3.2",
     "css-loader": "^0.26.2",
     "file-loader": "^0.10.0",
+    "normalize.css": "^5.0.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16"
   },

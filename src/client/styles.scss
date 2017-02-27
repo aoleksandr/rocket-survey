@@ -1,0 +1,94 @@
+@import 'node_modules/normalize.css/normalize';
+$break: 1200px;
+$headerHeight: 80px;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222222;
+  background-color: #CCCCCC;
+}
+
+#header {
+  height: $headerHeight;
+  text-align: center;
+  background: #333333;
+  padding-top: 10px;
+  color: #FFFFFF;
+}
+
+#app-container {
+  @media (max-width: $break) {
+    width: 100%;
+    padding: 0px;
+  }
+  padding: 40px 20px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  overflow: auto;
+  min-height: 450px;
+}
+
+#stages {
+  @media (max-width: $break) {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  margin-top: 30px;
+  width: 20%;
+  float: left;
+  .stage-marker {
+    @media (max-width: $break) {
+      width: 100px;
+      text-align: center;
+      float: left;
+      margin: 0px auto;
+    }
+    width: 100%;
+    text-align: right;
+    font-size: 23px;
+    margin-bottom: 8px;
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+#questions {
+  @media (max-width: $break) {
+    width: 100%;
+  }
+  text-align: center;
+  width: 80%;
+  float: left;
+  .stage-description {
+    color: #CCCCCC;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  .questions-list {
+    margin-bottom: 10px;
+    question {
+      height: 40px;
+      display: block;
+      font-size: 18px;
+      padding-bottom: 10px;
+      .input-field {
+        position: relative;
+        .error {
+          position: absolute;
+          left: 0px;
+          color: #d9534f;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+
+#success {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}

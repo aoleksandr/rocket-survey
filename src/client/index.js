@@ -13,7 +13,7 @@ import PhoneDirective from './directives/validators/phone.directive';
 import ZipDirective from './directives/validators/zip.directive';
 import MoneyDirective from './directives/validators/money.directive';
 import RangeFilter from './filters/range.filter';
-import './index.scss';
+import './styles.scss';
 
 angular.module('rocketSurvey', [ngMessages])
   .component('app', AppComponent)

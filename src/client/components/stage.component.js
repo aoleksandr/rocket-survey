@@ -5,6 +5,5 @@ export default {
   bindings: {
       index: '<',
       active: '<'
-  },
-  
+  }
 };

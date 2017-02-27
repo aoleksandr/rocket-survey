@@ -1,14 +1,16 @@
-<h1>RocketRoute Survey</h1>
+<section id="header">
+  <h1>RocketRoute Survey</h1>
+</section>
 <h2 ng-if="$ctrl.loading">Loading</h2>
-<section id="stages" ng-if="!$ctrl.loading">
-  <stage ng-repeat="(index, stage) in $ctrl.stages" 
-    active="$ctrl.state.stage === index" index="index" />
-</section>
-<section id="questions" ng-if="!$ctrl.loading && !$ctrl.done">
-  <div id="description">{{$ctrl.activeStage.text}}</div>
-  <questions-list questions="$ctrl.activeStage.questions" on-next="$ctrl.onNext()" />
-</section>
-<div id="success" ng-if="$ctrl.done">
-   Thanks for your answers. We will get back to you within 24 hours with our amazing product 
+<div id="app-container">
+  <section id="stages" ng-if="!$ctrl.loading">
+    <stage ng-repeat="(index, stage) in $ctrl.stages" active="$ctrl.state.stage === index" index="index" />
+  </section>
+  <section id="questions" ng-if="!$ctrl.loading && !$ctrl.done">
+    <p class="stage-description">{{$ctrl.activeStage.text}}</p>
+    <questions-list questions="$ctrl.activeStage.questions" on-next="$ctrl.onNext()" />
+  </section>
+  <section id="success">
+    Thanks for your answers. We will get back to you within 24 hours with our amazing product
+  </section>
 </div>
-

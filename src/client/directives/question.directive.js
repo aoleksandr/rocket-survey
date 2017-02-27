@@ -16,7 +16,7 @@ export default function ($compile) {
 
   function generateTemplate(question) {
     let directiveName = `<custom-input type="${question.type}" value="value" />`;
-    return `<p>${question.body.replace('___', directiveName)}</p>`;
+    return `<span>${question.body.replace('___', directiveName)}</span>`;
   }
 
   return directive;
