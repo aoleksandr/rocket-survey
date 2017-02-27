@@ -4,7 +4,9 @@
 <h2 ng-if="$ctrl.loading">Loading</h2>
 <div id="app-container">
   <section id="stages" ng-if="!$ctrl.loading && !$ctrl.done">
-    <stage ng-repeat="(index, stage) in $ctrl.stages" active="$ctrl.state.stage === index" index="index" />
+    <div class="container">
+      <stage ng-repeat="(index, stage) in $ctrl.stages" active="$ctrl.state.stage === index" index="index" />
+    </div>
   </section>
   <section id="questions" ng-if="!$ctrl.loading && !$ctrl.done">
     <p class="stage-description">{{$ctrl.activeStage.text}}</p>

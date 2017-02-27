@@ -1,5 +1,5 @@
 <ng-form name="$ctrl.customInputForm" class="input-field">
-  <input zip type="text" name="zip" ng-model="$ctrl.value" placeholder="zip code (5 digits)" required />
+  <input class="zip-input" zip type="text" name="zip" ng-model="$ctrl.value" placeholder="zip code (5 digits)" required />
   <div ng-show="$ctrl.customInputForm.zip.$touched" class="error" ng-messages="$ctrl.customInputForm.zip.$error">
     <span ng-message="required">This field is required</span>
     <span ng-message="zip">Zip code is invalid</span>
