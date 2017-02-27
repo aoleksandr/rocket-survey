@@ -8,10 +8,19 @@ router.get('/stages', (req, res) => {
 
 router.get('/countries', (req, res) => {
   res.json(countries);
-})
+});
+
+router.post('/submit', (req, res) => {
+  res.json({
+    status: 'ok',
+    data: req.body
+  });
+});
 
 router.get('*', function (req, res) {
-    res.status(404).send('Not found');
+  res.status(404).send('Not found');
 });
+
+
 
 module.exports = router;

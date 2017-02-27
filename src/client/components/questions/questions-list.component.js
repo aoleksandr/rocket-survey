@@ -6,7 +6,7 @@ export default {
     questions: '<',
     onNext: '&'
   },
-  controller($scope, StateService) {
+  controller($scope, StateService, ApiService) {
     this.$onChanges = () => {
       this.payload = {};
       this.questions.map(question => {
@@ -25,6 +25,7 @@ export default {
     });
 
     this.onNextClick = () => {
+      ApiService.submitAnswers(this.payload);
       this.questionsForm.$setPristine();
       this.onNext();
     };

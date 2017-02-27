@@ -11,6 +11,13 @@ export default function($http) {
                 url: '/api/countries',
                 method: 'GET'
             }).then(res => res.data);
+        },
+        submitAnswers(data) {
+            return $http({
+                url: '/api/submit',
+                method: 'POST',
+                data
+            }).then(res => res.data);
         }
     };
 }
